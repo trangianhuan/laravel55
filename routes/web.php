@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/elasticsearch','ElasticSearchController@elastic');
+
+
+Route::get('/test', function () {
+    $user = \App\User::first();
+    return 'hhoo';
+
+});

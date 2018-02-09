@@ -24,8 +24,16 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')
-        //          ->hourly();
+
+        $schedule->command('inspire')
+                 ->everyMinute();
+
+        // $schedule->exec('date >> /var/www/laravel55/myText.txt')
+        //          ->everyMinute();
+
+        $schedule->exec('php -v >> /var/www/laravel55/myText.txt')
+                 ->everyMinute();
+
     }
 
     /**
