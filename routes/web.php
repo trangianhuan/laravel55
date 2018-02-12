@@ -23,3 +23,8 @@ Route::get('/test', function () {
     return 'hhoo';
 
 });
+
+//Route::Resource('student');
+Route::group(['namespace' => 'Vue', 'prefix' => 'vue'], function () {
+    Route::resource('student', 'StudentController');
+});
